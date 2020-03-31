@@ -1,0 +1,195 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 1100px;
+  height: 92vh;
+  margin: 20px auto;
+  border-radius: 50px;
+  border: 3px solid #D4C979;
+  color: #8EA6D4;
+  -webkit-animation: okvir 20s infinite;
+          animation: okvir 20s infinite;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.container .noviTodo {
+  text-align: center;
+  color: #1F3254;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.container .noviTodo input {
+  font-size: 1.8rem;
+  font-family: inherit;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  background-color: #ddd;
+  outline: none;
+  padding-left: 1rem;
+}
+
+.container .noviTodo .spremi {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  width: 200px;
+  height: 40px;
+  background-color: #00B313;
+  border: none;
+  position: relative;
+  border-radius: 50px;
+  outline: none;
+}
+
+.container .noviTodo .spremi:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.container .noviTodo .spremi:hover::after {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: 0;
+  z-index: -1;
+}
+
+.container .noviTodo .spremi:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.container .noviTodo .spremi::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #00B313;
+  z-index: -1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  border-radius: 50px;
+}
+
+.container h1 {
+  text-align: center;
+  color: #1F3254;
+}
+
+.container h1::after {
+  content: '';
+  display: block;
+  height: 3px;
+  margin: auto;
+  width: 20%;
+  background: #1F3254;
+}
+
+.container h2 {
+  margin-top: 50px;
+  color: #1F3254;
+}
+
+.container:hover {
+  border: 3px solid #1F3254;
+}
+
+.container .todos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .todos .itemi p {
+  color: red;
+  font-weight: 600;
+  display: block;
+}
+
+.container .reset {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  bottom: 50px;
+  left: calc(50% - 100px);
+  font-size: 1.5rem;
+  font-family: inherit;
+  background-color: #ff0050;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+}
+
+.container .reset:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.container .reset:hover::after {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: 0;
+}
+
+.container .reset:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.container .reset:focus {
+  outline: none;
+}
+
+.container .reset::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-color: #ff0050;
+  z-index: -1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@-webkit-keyframes okvir {
+  0% {
+    border: 3px solid #1F3254;
+  }
+  33% {
+    border: 3px solid #D4C979;
+  }
+  66% {
+    border: 3px solid #D4639D;
+  }
+  100% {
+    border: 3px solid #1F3254;
+  }
+}
+
+@keyframes okvir {
+  0% {
+    border: 3px solid #1F3254;
+  }
+  33% {
+    border: 3px solid #D4C979;
+  }
+  66% {
+    border: 3px solid #D4639D;
+  }
+  100% {
+    border: 3px solid #1F3254;
+  }
+}
+/*# sourceMappingURL=main.css.map */

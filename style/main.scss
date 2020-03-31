@@ -1,0 +1,171 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 1100px;
+    height: 92vh;
+    margin: 20px auto;
+    border-radius: 50px;
+    border: 3px solid #D4C979;
+    color: #8EA6D4;
+    animation: okvir 20s infinite;
+    position: relative;
+    font-size: 1.2rem;
+
+    .noviTodo {
+        text-align: center;
+        color: #1F3254;
+        font-weight: 700;
+        font-size: 1.8rem;
+        
+
+        input {
+            font-size: 1.8rem;
+            font-family: inherit;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            background-color: #ddd;
+            outline: none;
+            padding-left: 1rem;
+        }
+
+        .spremi {
+            font-size: 1.5rem;
+            font-weight: 600;
+            font-family: inherit;
+            width: 200px;
+            height: 40px;
+            background-color: #00B313;
+            border: none;
+            position: relative;
+            border-radius: 50px;
+            outline: none;
+        
+
+            &:hover {
+                transform: translateY(-3px);
+    
+                &::after {
+                    transform: scale(2);
+                    opacity: 0;
+                    z-index: -1;
+                }
+            } 
+    
+            &:active {
+                transform: translateY(-1px);
+            } 
+            
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: #00B313;
+                z-index: -1;
+                transition: all .5s;
+                border-radius: 50px;
+            }
+        }
+    }
+
+    h1 {
+        text-align: center;
+        color: #1F3254;
+    }
+
+    h1::after {
+        content: '';
+        display: block;
+        height: 3px;
+        margin: auto;
+        width: 20%;
+        background: #1F3254;
+    }
+
+    h2 {
+        margin-top: 50px;
+        color: #1F3254;
+    }
+
+    &:hover {
+        border: 3px solid #1F3254;
+    }
+
+    .todos {
+        display: flex;
+        justify-content: space-evenly;
+
+        .itemi {
+
+            p {
+                color: red;
+                font-weight: 600;
+                display: block;
+            }
+        }
+    }
+
+    .reset {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        bottom: 50px;
+        left: calc(50% - 100px);
+        font-size: 1.5rem;
+        font-family: inherit;
+        background-color: #ff0050;
+        font-weight: 600;
+        border-radius: 50px;
+        border: none;
+        
+        &:hover {
+            transform: translateY(-3px);
+
+            &::after {
+                transform: scale(2);
+                opacity: 0;
+            }
+        } 
+
+        &:active {
+            transform: translateY(-1px);
+        } 
+
+        &:focus {
+            outline: none;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            background-color: #ff0050;
+            z-index: -1;
+            transition: all .5s;
+        }
+    }
+}
+
+@keyframes okvir {
+    0% {
+        border: 3px solid #1F3254;
+    }
+    33% {
+        border: 3px solid #D4C979;
+    }
+    66% {
+        border: 3px solid #D4639D;
+    }
+    100% {
+        border: 3px solid #1F3254;
+    }
+}
