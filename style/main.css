@@ -1,195 +1,150 @@
+:root {
+  --color-background: #80D5E8;
+  --color-border: #E897B6;
+  --color-letters: #596669;
+  --color-entry: #7AF5C8;
+}
+
 body {
+  background-color: var(--color-background);
   font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-  width: 1100px;
-  height: 92vh;
-  margin: 20px auto;
-  border-radius: 50px;
-  border: 3px solid #D4C979;
-  color: #8EA6D4;
-  -webkit-animation: okvir 20s infinite;
-          animation: okvir 20s infinite;
-  position: relative;
-  font-size: 1.2rem;
+  width: 1200px;
+  margin: 40px auto;
+  height: 920px;
+  border: 8px solid var(--color-border);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 140px 1fr 100px;
+      grid-template-rows: 140px 1fr 100px;
 }
 
-.container .noviTodo {
-  text-align: center;
-  color: #1F3254;
-  font-weight: 700;
-  font-size: 1.8rem;
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.container .noviTodo input {
-  font-size: 1.8rem;
+.header__headline {
+  font-size: 2.7rem;
+  color: var(--color-letters);
+  font-weight: 900;
+  margin-top: none;
+}
+
+.header .newTodo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .newTodoValue {
+  font-size: 1.7rem;
   font-family: inherit;
-  border-radius: 50px;
-  border: none;
   font-weight: 600;
-  background-color: #ddd;
-  outline: none;
-  padding-left: 1rem;
+  border: 3px solid var(--color-border);
+  color: var(--color-letters);
 }
 
-.container .noviTodo .spremi {
-  font-size: 1.5rem;
-  font-weight: 600;
+.header .newTodoValue:focus, .header .newTodoValue:active {
+  outline: none;
+}
+
+.btn {
   font-family: inherit;
-  width: 200px;
-  height: 40px;
-  background-color: #00B313;
-  border: none;
+  font-size: 1.7rem;
+  margin-left: 10px;
+  font-weight: 600;
+  color: var(--color-letters);
+  width: 120px;
   position: relative;
-  border-radius: 50px;
-  outline: none;
 }
 
-.container .noviTodo .spremi:hover {
+.btn:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
 
-.container .noviTodo .spremi:hover::after {
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  opacity: 0;
-  z-index: -1;
+.btn:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  outline: none;
 }
 
-.container .noviTodo .spremi:active {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+.btn:focus {
+  outline: none;
 }
 
-.container .noviTodo .spremi::after {
+.btn::after {
   content: '';
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
+  top: 0;
+  left: 0;
   height: 100%;
-  background-color: #00B313;
+  width: 100%;
   z-index: -1;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  border-radius: 50px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
-.container h1 {
-  text-align: center;
-  color: #1F3254;
+.btn:hover::after {
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
+  opacity: 0;
 }
 
-.container h1::after {
-  content: '';
-  display: block;
-  height: 3px;
-  margin: auto;
-  width: 20%;
-  background: #1F3254;
+.btn--entry {
+  background-color: var(--color-entry);
+  border: 3px solid var(--color-border);
 }
 
-.container h2 {
-  margin-top: 50px;
-  color: #1F3254;
+.btn--entry::after {
+  background-color: var(--color-entry);
+  border: 1px solid var(--color-border);
 }
 
-.container:hover {
-  border: 3px solid #1F3254;
+.btn--warning {
+  width: 300px;
+  background-color: var(--color-border);
+  border: 3px solid var(--color-entry);
 }
 
-.container .todos {
+.btn--warning::after {
+  background-color: var(--color-border);
+  border: 1px solid var(--color-entry);
+}
+
+.main {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  color: var(--color-letters);
 }
 
-.container .todos .itemi p {
-  color: red;
-  font-weight: 600;
-  display: block;
-}
-
-.container .reset {
-  position: absolute;
-  width: 200px;
-  height: 40px;
-  bottom: 50px;
-  left: calc(50% - 100px);
-  font-size: 1.5rem;
-  font-family: inherit;
-  background-color: #ff0050;
-  font-weight: 600;
-  border-radius: 50px;
-  border: none;
-}
-
-.container .reset:hover {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-}
-
-.container .reset:hover::after {
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  opacity: 0;
-}
-
-.container .reset:active {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-}
-
-.container .reset:focus {
-  outline: none;
-}
-
-.container .reset::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  background-color: #ff0050;
-  z-index: -1;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-@-webkit-keyframes okvir {
-  0% {
-    border: 3px solid #1F3254;
-  }
-  33% {
-    border: 3px solid #D4C979;
-  }
-  66% {
-    border: 3px solid #D4639D;
-  }
-  100% {
-    border: 3px solid #1F3254;
-  }
-}
-
-@keyframes okvir {
-  0% {
-    border: 3px solid #1F3254;
-  }
-  33% {
-    border: 3px solid #D4C979;
-  }
-  66% {
-    border: 3px solid #D4639D;
-  }
-  100% {
-    border: 3px solid #1F3254;
-  }
+.footer {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=main.css.map */

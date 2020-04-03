@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/mobile.css">
     <script src='program.js' defer></script>
     <title>SuperCool ToDo App</title>
 </head>
 <body>
     <div class="container">
-            <h1>Todo App</h1>
-            <div class="noviTodo">
-                <label for="">Unesi novi zadatak
-                    <input type="text" class="newTodo">
-                </label>
-                <button class='spremi'>Unesi</button>
-            </div>
-            <div class="todos">
-                <div class="noviZadatci">
-                    <h2>Za obaviti:</h2>
-                    <div class='itemi'>
-                    </div>
-                </div>
-                <div class="završeniZadatci">
-                    <h2>Rješeni zadatci</h2>
-                </div>
-            </div>
+        <header class="header">
+            <h1 class="header__headline">Todo List</h1>
+            <section class="newTodo">
+                    <input type="text" class='newTodoValue' placeholder="Unesi novi Todo">
+                <button class='btn btn--entry'>Upiši</button>
+            </section>
+        </header>
 
-            <button type="reset" class='reset'>Resetiraj</button>
+        <main class="main">
+            <section class="items">
+                <h2>Za obaviti</h2>
+            </section>
+            <section class="itemsArchive">
+                <h2>Obavljeno</h2>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <button class='btn btn--warning'>Resetiraj sve</button>
+            <button class='btn btn--warning'>Resetiraj obavljene</button>
+        </footer>
     </div>
 </body>
 </html>
