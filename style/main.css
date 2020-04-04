@@ -119,14 +119,17 @@ body {
 }
 
 .btn--warning {
+  font-family: inherit;
+  font-size: 1.7rem;
+  font-weight: 600;
   width: 300px;
   background-color: var(--color-border);
   border: 3px solid var(--color-entry);
 }
 
-.btn--warning::after {
-  background-color: var(--color-border);
-  border: 1px solid var(--color-entry);
+.btn--warning:hover {
+  border: 3px solid red;
+  background-color: red;
 }
 
 .main {
@@ -138,6 +141,19 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   color: var(--color-letters);
+}
+
+.main td {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.main .delete {
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--color-border);
+  padding: 0.1rem 0.3rem;
 }
 
 .footer {
