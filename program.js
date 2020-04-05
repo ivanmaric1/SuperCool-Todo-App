@@ -73,10 +73,10 @@ class Store {
         localStorage.setItem('todos', JSON.stringify(todos))
     }
 
-    static removeTodo(todo) {
+    static removeTodo(todoD) {
         const todos = Store.getTodos()
         todos.forEach((todo, index) => {
-            if(todo === todo) {
+            if(todo.todo === todoD) {
                 todos.splice(index, 1)
             }
         })
@@ -103,12 +103,14 @@ document.querySelector('.itemsList') .addEventListener('click', (e) => {
     let deleted = Store.getDeletedTodos()
     deleted.push(e.target.parentNode.parentNode.firstElementChild.innerText)
     localStorage.setItem('deletedTodos',JSON.stringify(deleted))
+    
     Store.removeTodo(e.target.parentNode.parentNode.firstElementChild.innerText)
     UI.deleteTodo(e.target)
     document.querySelector('.itemsArchive').innerText = '';
+    document.querySelector('.itemsList').innerText = ''
+    document.querySelector('.itemsArchive').innerText = ''
+    UI.displayTodos()
 })
-
-
 
 
 

@@ -120,10 +120,38 @@ body {
     justify-content: space-evenly;
     color: var(--color-letters);
 
-    td {
-        font-size: 1.3rem;
-        font-weight: 500;
-        line-height: 1.5;
+    h2{
+        margin-top: 45px;
+        font-size: 1.9rem;
+    }
+
+
+
+    .items {
+        width: 500px;
+        background: url(../img/block.png) no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+       
+        tr {
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+    }
+
+    .archives {
+        width: 500px;
+        background: url(../img/block.png) no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
     }
 
     .delete {
