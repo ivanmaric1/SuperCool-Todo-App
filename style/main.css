@@ -163,4 +163,8 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
 }
+
+.striketrough {
+  text-decoration: line-through;
+}
 /*# sourceMappingURL=main.css.map */
