@@ -91,10 +91,14 @@ document.addEventListener('DOMContentLoaded', UI.displayTodos())
 // Event : Add Todo
 document.querySelector('.btn--entry').addEventListener('click', (e) => {
     const todoName = document.querySelector('.newTodoValue').value
-    const todo = new Todo(todoName)
-    UI.addTodoToList(todo)
-    Store.addTodo(todo)
-    UI.clearFields()
+    if(!todoName) {
+        alert('Molimo unesite zadatak u polje!')
+    }  else {
+        const todo = new Todo(todoName)
+        UI.addTodoToList(todo)
+        Store.addTodo(todo)
+        UI.clearFields()
+    }
 })
 
 
@@ -111,7 +115,6 @@ document.querySelector('.itemsList') .addEventListener('click', (e) => {
     document.querySelector('.itemsArchive').innerText = ''
     UI.displayTodos()
 })
-
 
 
 
